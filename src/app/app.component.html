@@ -1,31 +1,28 @@
-<div class="container container-fluid navbar_div">
-  <nav class="navbar-expand-lg bg-info navbar">
-    <ul>
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page"
-        href="https://github.com/Jeremiias8">
-        <img src="../../../assets/icons/svg/bxl-github.svg"
-        alt="Mi Github"></a>
-      </li>
-      <li><a class="nav-link actived" routerLink= "/personal-info">Sobre Mí</a></li>
-      <li><a class="nav-link actived" routerLink= "/experience">Experiencia</a></li>
-      <li id="logo"><a class="nav-link" routerLink="">JF</a></li>
-      <li><a class="nav-link actived" routerLink="/rrss">RRSS</a></li>
-      <li><a class="nav-link actived" routerLink="/languages">Lenguajes</a></li>
-    </ul>
+  <div class="container container-fluid navbar_div">
+    <nav class="navbar-expand-lg navbar bg-dark d-flex flex-column">
+      <ul>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page"
+          href="https://github.com/Jeremiias8">
+          <img src="../../../assets/icons/svg/bxl-github.svg"
+          alt="Mi Github"></a>
+        </li>
+        <li><a class="nav-link actived" routerLink= "/personal-info">Sobre Mí</a></li>
+        <li><a class="nav-link actived" routerLink= "/experience">Experiencia</a></li>
+        <li id="logo"><a class="nav-link" routerLink="">JF</a></li>
+        <li><a class="nav-link actived" routerLink="/rrss">RRSS</a></li>
+        <li><a class="nav-link actived" routerLink="/languages">Lenguajes</a></li>
+      </ul>
+    </nav>
 
-    <input type="search" class="form-control m-2 p-2" placeholder="Look for smth" aria>
-    <button class="btn btn-primary m-2 text-white" type="submit">Accept</button>
-  </nav>
+    <section id="content">
+      <router-outlet></router-outlet>
+    </section>
 
-  <section id="content">
-    <router-outlet></router-outlet>
-  </section>
-
-  <footer>
-    <span>
-      Jeremías | &copy; 2023 | Todos los derechos reservados
-    </span>
-  </footer>
-</div>
+    <footer>
+      <span>
+        Jeremías | &copy; 2023 | Todos los derechos reservados
+      </span>
+    </footer>
+  </div>
 
