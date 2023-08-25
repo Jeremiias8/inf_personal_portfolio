@@ -9,6 +9,10 @@ import { RrssComponent } from './components/rrss/rrss.component'
 import { ExperienceComponent } from './components/experience/experience.component';
 import { ErrorComponent } from './components/error/error.component';
 import { LanguagesComponent } from './components/languages/languages.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+/* Ang Material */
+import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,9 @@ import { LanguagesComponent } from './components/languages/languages.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
