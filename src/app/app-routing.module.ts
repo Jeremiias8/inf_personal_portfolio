@@ -9,6 +9,7 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { RrssComponent } from './components/rrss/rrss.component';
 import { LanguagesComponent } from './components/languages/languages.component';
 import { ErrorComponent } from './components/error/error.component';
+import { DialogMaterialComponent } from './components/dialog-material/dialog-material.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'experience', component: ExperienceComponent },
   { path: 'rrss', component: RrssComponent },
   { path: 'languages', component: LanguagesComponent },
+  { path: 'dialogmat', component: DialogMaterialComponent },
   { path: '**', component: ErrorComponent }
 ];
 

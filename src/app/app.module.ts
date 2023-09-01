@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 /* Ang Material */
 import { MatSliderModule } from '@angular/material/slider';
+import { DialogMaterialComponent } from './components/dialog-material/dialog-material.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MatSliderModule } from '@angular/material/slider';
     RrssComponent,
     ExperienceComponent,
     ErrorComponent,
-    LanguagesComponent
+    LanguagesComponent,
+    DialogMaterialComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +33,7 @@ import { MatSliderModule } from '@angular/material/slider';
     MatSliderModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
