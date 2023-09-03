@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 export interface DialogData {
@@ -13,8 +13,8 @@ export interface DialogData {
 })
 export class DialogMaterialComponent implements OnInit {
 
-  footballer: string;
-  name: string;
+  footballer: string | undefined;
+  name: string | undefined;
 
   constructor(public dialog: MatDialog) { }
 
@@ -33,4 +33,19 @@ export class DialogMaterialComponent implements OnInit {
   ngOnInit(): void {
   }
 
+}
+
+@Component({
+  selector: 'dialog-material-dialog',
+  templateUrl: 'dialog-material.component.html'
+})
+export class DialogMaterialComponentExample {
+  constructor(
+    public dialogRef: MatDialogRef<DialogMaterialComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData,
+  ) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
 }

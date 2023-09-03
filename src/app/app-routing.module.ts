@@ -11,6 +11,11 @@ import { LanguagesComponent } from './components/languages/languages.component';
 import { ErrorComponent } from './components/error/error.component';
 import { DialogMaterialComponent } from './components/dialog-material/dialog-material.component';
 
+/* Tutorials components */
+import { TutorialsListComponent } from './components/tutorials-list/tutorials-list.component';
+import { TutorialDetailsComponent } from './components/tutorial-details/tutorial-details.component';
+import { AddTutorialComponent } from './components/add-tutorial/add-tutorial.component';
+
 
 const routes: Routes = [
   { path: 'personal-info', component: PersonalInfoComponent },
@@ -18,7 +23,10 @@ const routes: Routes = [
   { path: 'rrss', component: RrssComponent },
   { path: 'languages', component: LanguagesComponent },
   { path: 'dialogmat', component: DialogMaterialComponent },
-  { path: '**', component: ErrorComponent }
+  { path: 'tutorials', component: TutorialsListComponent },
+  { path: 'tutorials/:id', component: TutorialDetailsComponent },
+  { path: 'add', component: AddTutorialComponent },
+  { path: '', redirectTo: 'tutorials', pathMatch: 'full' }
 ];
 
 @NgModule({
