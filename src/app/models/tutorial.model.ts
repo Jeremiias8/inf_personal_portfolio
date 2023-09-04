@@ -1,4 +1,4 @@
-export class TutorialModel {
+export class Tutorial {
 
   id?: any;
   title?: string;

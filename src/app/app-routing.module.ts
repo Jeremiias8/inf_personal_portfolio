@@ -3,13 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 /* components */
 import { AppComponent } from './app.component';
-
-import { PersonalInfoComponent } from './components/personal-info/personal-info.component';
-import { ExperienceComponent } from './components/experience/experience.component';
-import { RrssComponent } from './components/rrss/rrss.component';
-import { LanguagesComponent } from './components/languages/languages.component';
-import { ErrorComponent } from './components/error/error.component';
-import { DialogMaterialComponent } from './components/dialog-material/dialog-material.component';
+import { HomeComponent } from './components/home/home.component';
 
 /* Tutorials components */
 import { TutorialsListComponent } from './components/tutorials-list/tutorials-list.component';
@@ -18,15 +12,11 @@ import { AddTutorialComponent } from './components/add-tutorial/add-tutorial.com
 
 
 const routes: Routes = [
-  { path: 'personal-info', component: PersonalInfoComponent },
-  { path: 'experience', component: ExperienceComponent },
-  { path: 'rrss', component: RrssComponent },
-  { path: 'languages', component: LanguagesComponent },
-  { path: 'dialogmat', component: DialogMaterialComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'tutorials', component: TutorialsListComponent },
   { path: 'tutorials/:id', component: TutorialDetailsComponent },
   { path: 'add', component: AddTutorialComponent },
-  { path: '', redirectTo: 'tutorials', pathMatch: 'full' }
+  { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({
